@@ -2,7 +2,7 @@ import time
 from netmiko import ConnectHandler
 import re
 
-#Build 1
+
 #Port
 def port_config(port, state):
     cmd = 'port edit '+ port +' state ' + state
