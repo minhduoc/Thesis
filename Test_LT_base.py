@@ -2,9 +2,6 @@ import time
 from netmiko import ConnectHandler
 import re
 
-#Build 2
-#provide some funtion for Port, Filter, user, policy
-
 
 #Port
 def port_config(port, state):
