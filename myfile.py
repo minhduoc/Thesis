@@ -41,7 +41,7 @@ Up      SFP-8      PORT-8                          Enabled  10G-FD    ---
 Up      RJ45-9     PORT-9                          Enabled  1G-FD     MDI 
 Up      RJ45-10    PORT-10                         Enabled  1G-FD     MDI 
 Up      RJ45-11    PORT-11                         Enabled  1G-FD     MDIX
-Up      RJ45-12    PORT-12                         Enabled  1G-FD     MDI 
+Up      RJ45-12    PORT-12                         Enabled  1G-FD     MDIX
 Up      Management Management                      Enabled  100M-FD   MDI 
 Down    ---        LAG-1                           Enabled  ---       --- 
 Down    ---        LAG-2                           Enabled  ---       --- 
@@ -67,7 +67,7 @@ Port name : PORT-3
 
 
 -------------------------------------------------------------------
-		Test_disable_one_port		FAILED
+		Test_disable_one_port		PASSED
 -------------------------------------------------------------------
 Executing command:    port edit PORT-1 state Enable
 Executing command:    port edit PORT-2 state Enable
@@ -182,6 +182,7 @@ Port name : PORT-4
       State         : Configuring
 
 
+
 Port name : PORT-5
    Connector : SFP-5
    State     : Disabled
@@ -247,6 +248,7 @@ Port name : PORT-8
       State         : Configuring
 
 
+
 Port name : PORT-9
    Connector : RJ45-9
    State     : Disabled
@@ -294,7 +296,6 @@ Port name : PORT-11
       Advertisements: 1G-FD,pause,asym-pause
       Link partner  : 10M-HD
       State         : Configuring
-
 
 
 Port name : PORT-12
@@ -371,7 +372,7 @@ Port name : PORT-5
 
 
 -------------------------------------------------------------------
-		Test_enable_one_port		FAILED
+		Test_enable_one_port		PASSED
 -------------------------------------------------------------------
 Executing command:    port edit PORT-1 state Enable
 Executing command:    port edit PORT-2 state Enable
@@ -454,7 +455,6 @@ Port name : PORT-2
       State         : Complete, link partner has auto-negotiation
 
 
-
 Port name : PORT-3
    Connector : SFP-3
    State     : Enabled
@@ -469,6 +469,7 @@ Port name : PORT-3
       Advertisements: 1G-FD,pause,asym-pause
       Link partner  : 1G-FD
       State         : Complete, link partner has auto-negotiation
+
 
 
 Port name : PORT-4
@@ -551,13 +552,14 @@ Port name : PORT-8
       State         : Disabled
 
 
+
 Port name : PORT-9
    Connector : RJ45-9
    State     : Enabled
    Status    : Up
    Speed     : 1Gbps
    Duplex    : Full-Duplex
-   MDI       : MDI
+   MDI       : MDIX
    Pauses    : Do not send pauses, Receive pauses
    Protection: ---
    Auto-nego        : Enabled
@@ -574,7 +576,7 @@ Port name : PORT-10
    Status    : Up
    Speed     : 1Gbps
    Duplex    : Full-Duplex
-   MDI       : MDI
+   MDI       : MDIX
    Pauses    : Do not send pauses, Receive pauses
    Protection: ---
    Auto-nego        : Enabled
@@ -583,7 +585,6 @@ Port name : PORT-10
       Link partner  : 10M-HD,10M-FD,100M-HD,100M-FD,1G-HD,1G-FD,pause,asym-pause
       State         : Complete, link partner has auto-negotiation
       Mastership    : Auto
-
 
 Port name : PORT-11
    Connector : RJ45-11
@@ -607,7 +608,7 @@ Port name : PORT-12
    Status    : Up
    Speed     : 1Gbps
    Duplex    : Full-Duplex
-   MDI       : MDIX
+   MDI       : MDI
    Pauses    : Do not send pauses, Receive pauses
    Protection: ---
    Auto-nego        : Enabled
@@ -637,7 +638,7 @@ PORT-9                          0                  0                  0         
 PORT-10                         0                  0                  0           0                 
 PORT-11                         0                  0                  0           0                 
 PORT-12                         0                  0                  0           0                 
-Management                      2,414,274          0                  3,858,191   0                 
+Management                      2,414,522          0                  3,858,749   0                 
 LAG-1                           0                  0                  0           0                 
 LAG-2                           0                  0                  0           0                 
 LAG-3                           0                  0                  0           0                 
@@ -931,9 +932,9 @@ admin
  
 Test Result!!!
 ==================================================================
-	Test_disable_one_port                             FAILED
+	Test_disable_one_port                             PASSED
 	Test_disable_all_port                             PASSED
-	Test_enable_one_port                              FAILED
+	Test_enable_one_port                              PASSED
 	Test_enable_all_port                              PASSED
 	Test_show_port_statistics_all_port                PASSED
 	Test_show_port_statistics                         PASSED
